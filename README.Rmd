@@ -38,6 +38,52 @@ or the development version from rOpenSci R-universe:
 install.packages("mirai.promises", repos = "https://shikokuchuo.r-universe.dev")
 ```
 
+### Example
+
+Below, a plot function requiring a long compute is simulated in a 'shiny' app.
+
+This app takes ~2s to start compared to the 8s that it would take if the ‘long-running’ computations were not running in parallel workers.
+
+```{r example, eval=FALSE}
+library(shiny)
+library(promises)
+library(mirai)
+library(mirai.promises)
+
+# set 4 persistent workers
+daemons(n = 4L)
+
+ui <- fluidPage(
+  fluidRow(
+    plotOutput("one"),
+    plotOutput("two"),
+  ),
+  fluidRow(
+    plotOutput("three"),
+    plotOutput("four"),
+  )
+)
+
+make_plot <- function(time) {
+  Sys.sleep(time)
+  runif(10)
+}
+
+server <- function(input, output, session) {
+  output$one <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
+  output$two <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
+  output$three <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
+  output$four <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
+  session$onSessionEnded(stopApp)
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+### Thanks
+
+[Daniel Falbel](https://github.com/dfalbel/) for the original version of this example and consenting to its use here, as well as providing the use case which motivated this package.
+
 ### Links
 
 `mirai` website: <https://shikokuchuo.net/mirai/><br />

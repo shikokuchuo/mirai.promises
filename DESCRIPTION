@@ -1,7 +1,7 @@
 Package: mirai.promises
 Type: Package
 Title: Make 'Mirai' 'Promises'
-Version: 0.0.1
+Version: 0.0.2
 Description: Use 'mirai' as 'promises' for easy integration in 'plumber' or
     'shiny' pipelines.
 Authors@R: 
@@ -24,5 +24,3 @@ Imports:
     later (>= 1.0.0),
     promises (>= 1.1.0)
 RoxygenNote: 7.2.3
-Suggests: 
-    covr
