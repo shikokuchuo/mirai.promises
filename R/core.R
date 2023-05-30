@@ -34,9 +34,14 @@ NULL
 #'     for class 'mirai'.
 #'
 #' @examples
+#' if (interactive()) {
+#' # Only run examples in interactive R sessions
+#'
 #' p <- promises::as.promise(mirai::mirai("example"))
-#' p
+#' print(p)
 #' promises::is.promise(p)
+#'
+#' }
 #'
 #' @method as.promise mirai
 #' @export

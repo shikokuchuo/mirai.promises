@@ -20,8 +20,13 @@ This function is an S3 method for the generic \code{\link{as.promise}}
     for class 'mirai'.
 }
 \examples{
+if (interactive()) {
+# Only run examples in interactive R sessions
+
 p <- promises::as.promise(mirai::mirai("example"))
-p
+print(p)
 promises::is.promise(p)
+
+}
 
 }
