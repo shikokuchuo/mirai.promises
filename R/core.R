@@ -14,7 +14,13 @@
 # You should have received a copy of the GNU General Public License along with
 # mirai.promises. If not, see <https://www.gnu.org/licenses/>.
 
-# mirai ------------------------------------------------------------------------
+# mirai.promises ---------------------------------------------------------------
+
+#' @importFrom mirai is_error_value unresolved
+#' @importFrom later later
+#' @importFrom promises as.promise promise
+#'
+NULL
 
 #' Make mirai promise
 #'
