@@ -1,6 +1,6 @@
 # mirai.promises 0.0.2
 
-* Adds readme example. Thanks @dfalbel.
+* Adds readme example (thanks @dfalbel).
 
 # mirai.promises 0.0.1
 

@@ -63,11 +63,13 @@ make_plot <- function(time) {
   runif(10)
 }
 
+args <- list(make_plot = make_plot, time = 2)
+
 server <- function(input, output, session) {
-  output$one <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
-  output$two <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
-  output$three <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
-  output$four <- renderPlot(mirai(make_plot(time), make_plot = make_plot, time = 2) %...>% plot())
+  output$one <- renderPlot(mirai(make_plot(time), .args = args) %...>% plot())
+  output$two <- renderPlot(mirai(make_plot(time), .args = args) %...>% plot())
+  output$three <- renderPlot(mirai(make_plot(time), .args = args) %...>% plot())
+  output$four <- renderPlot(mirai(make_plot(time), .args = args) %...>% plot())
   session$onSessionEnded(stopApp)
 }
 
@@ -77,8 +79,8 @@ shinyApp(ui = ui, server = server)
 ### Thanks
 
 [Daniel Falbel](https://github.com/dfalbel/) for the original version of
-this example and consenting to its use here, as well as providing the
-use case which motivated this package.
+the above example and consenting to its reproduction here, as well as
+providing the use case which motivated this package.
 
 ### Links
 
