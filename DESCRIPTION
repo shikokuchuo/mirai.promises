@@ -1,0 +1,26 @@
+Package: mirai.promises
+Type: Package
+Title: Make 'Mirai' 'Promises'
+Version: 0.0.1
+Description: Use 'mirai' as 'promises' for easy integration in 'plumber' or
+    'shiny' pipelines.
+Authors@R: 
+    c(person(given = "Charlie",
+             family = "Gao",
+             role = c("aut", "cre"),
+             email = "charlie.gao@shikokuchuo.net",
+             comment = c(ORCID = "0000-0002-0750-061X")),
+      person(given = "Hibiki AI Limited",
+             email = "info@hibiki-ai.com",
+             role = "cph"))
+License: GPL (>= 3)
+BugReports: https://github.com/shikokuchuo/mirai.promises/issues
+URL: https://shikokuchuo.net/mirai.promises/, https://github.com/shikokuchuo/mirai.promises/
+Encoding: UTF-8
+Depends: 
+    R (>= 2.12)
+Imports: 
+    mirai (>= 0.8.7),
+    later (>= 1.0.0),
+    promises (>= 1.1.0)
+RoxygenNote: 7.2.3
