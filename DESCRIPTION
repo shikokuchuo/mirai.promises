@@ -24,3 +24,5 @@ Imports:
     later (>= 1.0.0),
     promises (>= 1.1.0)
 RoxygenNote: 7.2.3
+Suggests: 
+    covr

@@ -10,6 +10,7 @@ status](https://www.r-pkg.org/badges/version/mirai.promises?color=112d4e)](https
 [![mirai.promises status
 badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=24a60e)](https://shikokuchuo.r-universe.dev)
 [![R-CMD-check](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml)
+[![Codecov](https://codecov.io/gh/shikokuchuo/mirai.promises/branch/main/graph/badge.svg)](https://app.codecov.io/gh/shikokuchuo/mirai.promises)
 <!-- badges: end -->
 
 `mirai.promises` allows the use of ‘mirai’ as ‘promises’ for easy
