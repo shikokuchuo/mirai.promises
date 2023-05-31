@@ -22,7 +22,7 @@
 #'
 NULL
 
-#' Make mirai promise
+#' Make 'Mirai' 'Promise'
 #'
 #' Creates a 'promise' from a 'mirai'.
 #'

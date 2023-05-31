@@ -2,7 +2,7 @@
 % Please edit documentation in R/core.R
 \name{as.promise.mirai}
 \alias{as.promise.mirai}
-\title{Make mirai promise}
+\title{Make 'Mirai' 'Promise'}
 \usage{
 \method{as.promise}{mirai}(x)
 }

@@ -1,9 +1,15 @@
 Package: mirai.promises
 Type: Package
 Title: Make 'Mirai' 'Promises'
-Version: 0.0.2
-Description: Use 'mirai' as 'promises' for easy integration in 'plumber' or
-    'shiny' pipelines.
+Version: 0.1.0
+Description: Allows 'mirai' objects encapsulating asynchronous computations,
+    from the 'mirai' package by Gao (2023) <doi:10.5281/zenodo.7912722>, to be
+    used interchangeably with 'promise' objects from the 'promises' package by
+    Cheng (2021) <https://CRAN.R-project.org/package=promises>. This facilitates
+    their use with packages 'plumber' by Schloerke and Allen (2022)
+    <https://CRAN.R-project.org/package=plumber> and 'shiny' by Cheng, Allaire,
+    Sievert, Schloerke, Xie, Allen, McPherson, Dipert and Borges (2022)
+    <https://CRAN.R-project.org/package=shiny>.
 Authors@R: 
     c(person(given = "Charlie",
              family = "Gao",
@@ -20,7 +26,7 @@ Encoding: UTF-8
 Depends: 
     R (>= 2.12)
 Imports: 
-    mirai (>= 0.8.7),
+    mirai,
     later (>= 1.0.0),
     promises (>= 1.1.0)
 RoxygenNote: 7.2.3
