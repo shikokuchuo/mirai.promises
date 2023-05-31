@@ -2,22 +2,25 @@
 % Please edit documentation in R/core.R
 \name{as.promise.mirai}
 \alias{as.promise.mirai}
+\alias{as.promise.recvAio}
 \title{Make 'Mirai' 'Promise'}
 \usage{
 \method{as.promise}{mirai}(x)
+
+\method{as.promise}{recvAio}(x)
 }
 \arguments{
-\item{x}{an object of class 'mirai'.}
+\item{x}{an object of class 'mirai' or 'recvAio'.}
 }
 \value{
 A 'promise' object.
 }
 \description{
-Creates a 'promise' from a 'mirai'.
+Creates a 'promise' from a 'mirai' or 'recvAio'.
 }
 \details{
 This function is an S3 method for the generic \code{\link{as.promise}}
-    for class 'mirai'.
+    for class 'mirai' or 'recvAio'.
 }
 \examples{
 if (interactive()) {

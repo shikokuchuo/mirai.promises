@@ -25,6 +25,8 @@ knitr::opts_chunk$set(
 
 `mirai.promises` allows the use of 'mirai' as 'promises' for easy integration in 'plumber' or 'shiny' pipelines.
 
+`mirai.promises` also supports [`nanonext`](https://doi.org/10.5281/zenodo.7903429) 'recvAio' asynchronous message receives.
+
 ### Installation
 
 Install the latest release from CRAN:
@@ -94,6 +96,9 @@ shinyApp(ui = ui, server = server)
 `mirai` website: <https://shikokuchuo.net/mirai/><br />
 `mirai` on CRAN: <https://cran.r-project.org/package=mirai><br />
 &nbsp;&nbsp;- High Performance Computing CRAN Task View: <https://cran.r-project.org/view=HighPerformanceComputing>
+
+`nanonext` website: <https://shikokuchuo.net/nanonext/><br />
+`nanonext` on CRAN: <https://cran.r-project.org/package=nanonext>
 
 --
 

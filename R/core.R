@@ -24,14 +24,14 @@ NULL
 
 #' Make 'Mirai' 'Promise'
 #'
-#' Creates a 'promise' from a 'mirai'.
+#' Creates a 'promise' from a 'mirai' or 'recvAio'.
 #'
-#' @param x an object of class 'mirai'.
+#' @param x an object of class 'mirai' or 'recvAio'.
 #'
 #' @return A 'promise' object.
 #'
 #' @details This function is an S3 method for the generic \code{\link{as.promise}}
-#'     for class 'mirai'.
+#'     for class 'mirai' or 'recvAio'.
 #'
 #' @examples
 #' if (interactive()) {
@@ -61,3 +61,9 @@ as.promise.mirai <- function(x) {
   )
 
 }
+
+#' @rdname as.promise.mirai
+#' @method as.promise recvAio
+#' @export
+#'
+as.promise.recvAio <- as.promise.mirai

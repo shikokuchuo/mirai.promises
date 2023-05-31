@@ -17,6 +17,10 @@ badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=24a60e)](h
 `mirai.promises` allows the use of ‘mirai’ as ‘promises’ for easy
 integration in ‘plumber’ or ‘shiny’ pipelines.
 
+`mirai.promises` also supports
+[`nanonext`](https://doi.org/10.5281/zenodo.7903429) ‘recvAio’
+asynchronous message receives.
+
 ### Installation
 
 Install the latest release from CRAN:
@@ -92,6 +96,9 @@ use case that motivated this package.
 <https://cran.r-project.org/package=mirai><br />   - High Performance
 Computing CRAN Task View:
 <https://cran.r-project.org/view=HighPerformanceComputing>
+
+`nanonext` website: <https://shikokuchuo.net/nanonext/><br /> `nanonext`
+on CRAN: <https://cran.r-project.org/package=nanonext>
 
 –
 
