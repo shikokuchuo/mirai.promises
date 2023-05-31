@@ -21,7 +21,8 @@ Authors@R:
              role = "cph"))
 License: GPL (>= 3)
 BugReports: https://github.com/shikokuchuo/mirai.promises/issues
-URL: https://github.com/shikokuchuo/mirai.promises/
+URL: http://shikokuchuo.net/mirai.promises/,
+    https://github.com/shikokuchuo/mirai.promises/
 Encoding: UTF-8
 Depends: 
     R (>= 2.12)
