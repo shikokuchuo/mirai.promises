@@ -1,7 +1,7 @@
 Package: mirai.promises
 Type: Package
 Title: Make 'Mirai' 'Promises'
-Version: 0.1.1
+Version: 0.1.1.9000
 Description: Allows 'mirai' objects encapsulating asynchronous computations,
     from the 'mirai' package by Gao (2023) <doi:10.5281/zenodo.7912722>, to be
     used interchangeably with 'promise' objects from the 'promises' package by
@@ -17,7 +17,6 @@ Authors@R:
              email = "charlie.gao@shikokuchuo.net",
              comment = c(ORCID = "0000-0002-0750-061X")),
       person(given = "Hibiki AI Limited",
-             email = "info@hibiki-ai.com",
              role = "cph"))
 License: GPL (>= 3)
 BugReports: https://github.com/shikokuchuo/mirai.promises/issues
@@ -25,7 +24,7 @@ URL: https://shikokuchuo.net/mirai.promises/,
     https://github.com/shikokuchuo/mirai.promises/
 Encoding: UTF-8
 Depends: 
-    R (>= 2.12)
+    R (>= 3.5)
 Imports: 
     mirai,
     later (>= 1.0.0),

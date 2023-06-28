@@ -1,3 +1,5 @@
+# mirai.promises 0.1.1.9000 (development)
+
 # mirai.promises 0.1.1
 
 * Adds `as.promise.recvAio` as an alias, supporting 'recvAio' asynchronous message receives from the `nanonext` package.
