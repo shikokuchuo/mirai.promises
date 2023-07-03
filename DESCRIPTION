@@ -24,7 +24,7 @@ URL: https://shikokuchuo.net/mirai.promises/,
     https://github.com/shikokuchuo/mirai.promises/
 Encoding: UTF-8
 Depends: 
-    R (>= 3.5)
+    R (>= 2.12)
 Imports: 
     mirai,
     later (>= 1.0.0),
