@@ -53,7 +53,7 @@ as.promise.mirai <- function(x) {
       query <- function()
         if (unresolved(x))
           later(query, delay = 0.1) else
-            if (is_error_value(value <- .subset2(x, "data")))
+            if (is_error_value(value <- parent.env(x)[["result"]]))
               reject(value) else
                 resolve(value)
       query()
