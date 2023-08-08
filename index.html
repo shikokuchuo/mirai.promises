@@ -101,7 +101,7 @@
 </h3>
 <p>The below example simulates a plot function requiring a long compute in a ‘shiny’ app.</p>
 <p>This app takes c. 2s to start compared to the 8s it would otherwise take if the ‘long-running’ computations were not running on parallel workers.</p>
-<p>The <code>MIRAI_PROMISES</code> environment variable may be set prior to package load to customise the frequency to poll for promise resolution (defaults to 0.1s).</p>
+<p>The <code>MIRAI_PROMISES</code> environment variable may be set prior to package load to customise the frequency with which to poll for promise resolution (defaults to 0.1s).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>MIRAI_PROMISES <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span>
 <span></span>
