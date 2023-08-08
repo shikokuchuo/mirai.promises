@@ -43,7 +43,13 @@ a ‘shiny’ app.
 This app takes c. 2s to start compared to the 8s it would otherwise take
 if the ‘long-running’ computations were not running on parallel workers.
 
+The `MIRAI_PROMISES` environment variable may be set prior to package
+load to customise the frequency with which to poll for promise
+resolution (defaults to 0.1s).
+
 ``` r
+Sys.setenv(MIRAI_PROMISES = 0.05)
+
 library(shiny)
 library(promises)
 library(mirai)
