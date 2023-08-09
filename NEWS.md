@@ -1,7 +1,7 @@
-# mirai.promises 0.1.1.9000 (development)
+# mirai.promises 0.1.2
 
-* Checks the `MIRAI_PROMISES` environment variable on package load to set the frequency with which to poll for promise resolution, defaulting to 0.1s if not set.
-* Minor performance enhancements.
+* The `MIRAI_PROMISES` environment variable is now checked on package load for a custom frequency with which to poll for promise resolution.
+* Performance enhancements.
 
 # mirai.promises 0.1.1
 
