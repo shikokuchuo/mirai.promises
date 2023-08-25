@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mirai.promises</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0</span>
       </span>
     </div>
 
@@ -60,10 +60,10 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for mirai</span></span>
-<span><span class="fu"><a href="https://rstudio.github.io/promises//reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S3 method for recvAio</span></span>
-<span><span class="fu"><a href="https://rstudio.github.io/promises//reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -80,11 +80,12 @@
     </div>
     <div id="details">
     <h2>Details</h2>
-    <p>This function is an S3 method for the generic <code><a href="https://rstudio.github.io/promises//reference/is.promise.html" class="external-link">as.promise</a></code>
+    <p>This function is an S3 method for the generic <code><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">as.promise</a></code>
     for class 'mirai' or 'recvAio'.</p>
-<p>Set a numeric value for the environment variable <code>MIRAI_PROMISES</code>
-    prior to package load to provide a frequency (in seconds) other than the
-    default 0.1s with which to poll for promise resolution.</p>
+<p>Set the option <code>mirai.promises</code> at any time using
+    <code>options(mirai.promises = &lt;numeric value&gt;)</code> to provide a frequency
+    (in seconds) other than the default 0.1s with which to poll for promise
+    resolution.</p>
     </div>
 
     <div id="ref-examples">
@@ -92,9 +93,9 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="co"># Only run examples in interactive R sessions</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu">promises</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/promises//reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="fu">mirai</span><span class="fu">::</span><span class="fu"><a href="https://shikokuchuo.net/mirai/reference/mirai.html" class="external-link">mirai</a></span><span class="op">(</span><span class="st">"example"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu">promises</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">as.promise</a></span><span class="op">(</span><span class="fu">mirai</span><span class="fu">::</span><span class="fu"><a href="https://shikokuchuo.net/mirai/reference/mirai.html" class="external-link">mirai</a></span><span class="op">(</span><span class="st">"example"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">promises</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/promises//reference/is.promise.html" class="external-link">is.promise</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">promises</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">is.promise</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
