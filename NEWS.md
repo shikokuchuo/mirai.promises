@@ -1,3 +1,8 @@
+# mirai.promises 0.2.0
+
+* Switches to using the option 'mirai.promises' rather than an environment variable to set the polling time (deault 0.1s).
+* Permits using `options(mirai.promises = <numeric value>)` to set and `getOption("mirai.promises")` to view the set value at any time.
+
 # mirai.promises 0.1.2
 
 * The `MIRAI_PROMISES` environment variable is now checked on package load for a custom frequency with which to poll for promise resolution.

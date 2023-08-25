@@ -22,9 +22,10 @@ Creates a 'promise' from a 'mirai' or 'recvAio'.
 This function is an S3 method for the generic \code{\link{as.promise}}
     for class 'mirai' or 'recvAio'.
 
-    Set a numeric value for the environment variable \code{MIRAI_PROMISES}
-    prior to package load to provide a frequency (in seconds) other than the
-    default 0.1s with which to poll for promise resolution.
+    Set the option \code{mirai.promises} at any time using
+    \code{options(mirai.promises = <numeric value>)} to provide a frequency
+    (in seconds) other than the default 0.1s with which to poll for promise
+    resolution.
 }
 \examples{
 if (interactive()) {

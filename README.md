@@ -14,8 +14,8 @@ badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=24a60e)](h
 [![DOI](https://zenodo.org/badge/647242817.svg)](https://zenodo.org/badge/latestdoi/647242817)
 <!-- badges: end -->
 
-`mirai.promises` allows the use of ‘mirai’ as ‘promises’ for easy
-integration in ‘plumber’ or ‘shiny’ pipelines.
+`mirai.promises` makes ‘mirai’ ‘promises’ for easy integration in
+‘plumber’ or ‘shiny’ pipelines.
 
 `mirai.promises` also supports
 [`nanonext`](https://doi.org/10.5281/zenodo.7903429) ‘recvAio’
@@ -43,12 +43,11 @@ a ‘shiny’ app.
 This app takes c. 2s to start compared to the 8s it would otherwise take
 if the ‘long-running’ computations were not running on parallel workers.
 
-The `MIRAI_PROMISES` environment variable may be set prior to package
-load to customise the frequency with which to poll for promise
-resolution (defaults to 0.1s).
+The option ‘mirai.promises’ may be set at any time to customise the
+frequency with which to poll for promise resolution (defaults to 0.1s).
 
 ``` r
-Sys.setenv(MIRAI_PROMISES = 0.05)
+options(mirai.promises = 0.05)
 
 library(shiny)
 library(promises)
