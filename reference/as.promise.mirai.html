@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mirai.promises</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.3.0</span>
       </span>
     </div>
 
@@ -82,10 +82,8 @@
     <h2>Details</h2>
     <p>This function is an S3 method for the generic <code><a href="https://rstudio.github.io/promises/reference/is.promise.html" class="external-link">as.promise</a></code>
     for class 'mirai' or 'recvAio'.</p>
-<p>Set the option <code>mirai.promises</code> at any time using
-    <code>options(mirai.promises = &lt;numeric value&gt;)</code> to provide a frequency
-    (in seconds) other than the default 0.1s with which to poll for promise
-    resolution.</p>
+<p><code><a href="polling.html">polling</a></code> may be used to customise the frequency with which
+    to poll for promise resolution (defaults to every 100 milliseconds).</p>
     </div>
 
     <div id="ref-examples">
