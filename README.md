@@ -47,12 +47,12 @@ if the ‘long-running’ computations were not running on parallel workers.
 for promise resolution (defaults to every 100 ms).
 
 ``` r
-polling(freq = 50L)
-
 library(shiny)
 library(promises)
 library(mirai)
 library(mirai.promises)
+
+polling(freq = 50L)
 
 # set 4 persistent workers
 daemons(n = 4L)
