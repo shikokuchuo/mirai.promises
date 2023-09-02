@@ -103,12 +103,12 @@
 <p>This app takes c. 2s to start compared to the 8s it would otherwise take if the ‘long-running’ computations were not running on parallel workers.</p>
 <p><code><a href="reference/polling.html">polling()</a></code> may be used to customise the frequency with which to poll for promise resolution (defaults to every 100 ms).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/polling.html">polling</a></span><span class="op">(</span>freq <span class="op">=</span> <span class="fl">50L</span><span class="op">)</span></span>
-<span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.posit.co/" class="external-link">shiny</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shiny.posit.co/" class="external-link">shiny</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/promises/" class="external-link">promises</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shikokuchuo.net/mirai/" class="external-link">mirai</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://shikokuchuo.net/mirai.promises/">mirai.promises</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/polling.html">polling</a></span><span class="op">(</span>freq <span class="op">=</span> <span class="fl">50L</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># set 4 persistent workers</span></span>
 <span><span class="fu"><a href="https://shikokuchuo.net/mirai/reference/daemons.html" class="external-link">daemons</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">4L</span><span class="op">)</span></span>
