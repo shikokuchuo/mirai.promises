@@ -20,7 +20,10 @@
 #' @importFrom later later
 #' @importFrom promises as.promise promise
 #'
-.. <- `[[<-`(new.env(hash = FALSE, size = 1L), "freq", 0.1)
+.. <- NULL
+
+.onLoad <- function(libname, pkgname)
+  .. <<- `[[<-`(new.env(hash = FALSE, size = 1L), "freq", 0.1)
 
 #' Make 'Mirai' 'Promise'
 #'
