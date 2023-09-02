@@ -22,8 +22,7 @@
 #'
 .. <- NULL
 
-.onLoad <- function(libname, pkgname)
-  .. <<- `[[<-`(new.env(hash = FALSE, size = 1L), "freq", 0.1)
+.onLoad <- function(libname, pkgname) .. <<- `[[<-`(new.env(hash = FALSE), "freq", 0.1)
 
 #' Make 'Mirai' 'Promise'
 #'
@@ -36,10 +35,8 @@
 #' @details This function is an S3 method for the generic \code{\link{as.promise}}
 #'     for class 'mirai' or 'recvAio'.
 #'
-#'     Set the option \code{mirai.promises} at any time using
-#'     \code{options(mirai.promises = <numeric value>)} to provide a frequency
-#'     (in seconds) other than the default 0.1s with which to poll for promise
-#'     resolution.
+#'     \code{\link{polling}} may be used to customise the frequency with which
+#'     to poll for promise resolution (defaults to every 100 milliseconds).
 #'
 #' @examples
 #' if (interactive()) {
@@ -78,8 +75,8 @@ as.promise.recvAio <- as.promise.mirai
 
 #' Set Polling Frequency
 #'
-#' Set the frequency at which to poll for promise resolution (the default being
-#'     100 milliseconds).
+#' Set the frequency with which to poll for promise resolution (the default
+#'     being 100 milliseconds).
 #'
 #' @param freq [default 100L] integer number of milliseconds.
 #'

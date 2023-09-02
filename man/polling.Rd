@@ -13,8 +13,8 @@ polling(freq = 100L)
 Invisible NULL.
 }
 \description{
-Set the frequency at which to poll for promise resolution (the default being
-    100 milliseconds).
+Set the frequency with which to poll for promise resolution (the default
+    being 100 milliseconds).
 }
 \examples{
 polling(freq = 1000L)
