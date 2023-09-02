@@ -1,3 +1,7 @@
+# mirai.promises 0.2.0.9000 (development)
+
+* Implements `polling()` as a more efficient mechanism for setting the polling time for promise resolution, retiring the option 'mirai.promises'.
+
 # mirai.promises 0.2.0
 
 * Switches to using the option 'mirai.promises' rather than an environment variable to set the polling time (deault 0.1s).

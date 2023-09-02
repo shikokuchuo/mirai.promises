@@ -20,11 +20,7 @@
 #' @importFrom later later
 #' @importFrom promises as.promise promise
 #'
-NULL
-
-.onLoad <- function(libname, pkgname) {
-  options(mirai.promises = 0.1)
-}
+.. <- `[[<-`(new.env(hash = FALSE, size = 1L), "freq", 0.1)
 
 #' Make 'Mirai' 'Promise'
 #'
@@ -61,7 +57,7 @@ as.promise.mirai <- function(x) {
     function(resolve, reject) {
       query <- function()
         if (unresolved(x))
-          later(query, delay = getOption("mirai.promises")) else
+          later(query, delay = ..[["freq"]]) else
             if (is_error_value(value <- parent.env(x)[["result"]]))
               reject(value) else
                 resolve(value)
@@ -76,3 +72,25 @@ as.promise.mirai <- function(x) {
 #' @export
 #'
 as.promise.recvAio <- as.promise.mirai
+
+#' Set Polling Frequency
+#'
+#' Set the frequency at which to poll for promise resolution (the default being
+#'     100 milliseconds).
+#'
+#' @param freq [default 100L] integer number of milliseconds.
+#'
+#' @return Invisible NULL.
+#'
+#' @examples
+#' polling(freq = 1000L)
+#' polling()
+#'
+#' @export
+#'
+polling <- function(freq = 100L) {
+
+  `[[<-`(.., "freq", freq / 1000L)
+  invisible()
+
+}
