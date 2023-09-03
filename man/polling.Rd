@@ -17,7 +17,10 @@ Set the frequency with which to poll for promise resolution (the default
     being 100 milliseconds).
 }
 \examples{
+# set polling frequency to 1s
 polling(freq = 1000L)
+
+# reset polling frequency to default 100 ms
 polling()
 
 }

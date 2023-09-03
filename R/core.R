@@ -83,7 +83,10 @@ as.promise.recvAio <- as.promise.mirai
 #' @return Invisible NULL.
 #'
 #' @examples
+#' # set polling frequency to 1s
 #' polling(freq = 1000L)
+#'
+#' # reset polling frequency to default 100 ms
 #' polling()
 #'
 #' @export
