@@ -16,7 +16,8 @@
 
 # mirai.promises ---------------------------------------------------------------
 
-#' @importFrom mirai is_error_value unresolved
+#' @importFrom mirai is_error_value
+#' @importFrom nanonext .unresolved
 #' @importFrom later later
 #' @importFrom promises as.promise promise
 #'
@@ -56,9 +57,9 @@ as.promise.mirai <- function(x) {
   promise(
     function(resolve, reject) {
       query <- function()
-        if (unresolved(x))
+        if (.unresolved(x))
           later(query, delay = ..[["freq"]]) else
-            if (is_error_value(value <- parent.env(x)[["result"]]))
+            if (is_error_value(value <- x[["data"]]))
               reject(value) else
                 resolve(value)
       query()

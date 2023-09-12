@@ -26,7 +26,8 @@ Encoding: UTF-8
 Depends: 
     R (>= 3.5)
 Imports: 
-    mirai,
+    mirai (>= 0.8.2),
+    nanonext (>= 0.8.1),
     later (>= 1.0.0),
     promises (>= 1.1.0)
 RoxygenNote: 7.2.3

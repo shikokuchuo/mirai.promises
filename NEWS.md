@@ -1,5 +1,8 @@
 # mirai.promises 0.3.0.9000 (development)
 
+* Performance enhancements.
+* Explicitly imports `nanonext` (the only package dependency of `mirai`).
+
 # mirai.promises 0.3.0
 
 * Implements `polling()` as a more efficient mechanism for setting the polling time for promise resolution, retiring the option 'mirai.promises'.
