@@ -85,8 +85,7 @@ NULL
 #' @method as.promise mirai
 #' @export
 #'
-as.promise.mirai <- function(x) {
-
+as.promise.mirai <- function(x)
   promise(
     function(resolve, reject) {
       query <- function()
@@ -98,8 +97,6 @@ as.promise.mirai <- function(x) {
       query()
     }
   )
-
-}
 
 #' @rdname as.promise.mirai
 #' @method as.promise recvAio
@@ -127,6 +124,7 @@ as.promise.recvAio <- as.promise.mirai
 #'
 polling <- function(freq = 100L) {
 
+  is.numeric(freq) || stop("'freq' must be a numeric value")
   `[[<-`(.., "freq", freq / 1000L)
   invisible()
 
