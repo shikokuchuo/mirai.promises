@@ -7,4 +7,5 @@ navbar:
     href: https://shikokuchuo.net/
 reference:
 - contents:
+  - mirai.promises-package
   - matches("^[a-zA-Z]*")

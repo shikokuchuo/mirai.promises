@@ -1,8 +1,6 @@
 # mirai.promises 0.3.0.9000 (development)
 
 * Depends on `mirai` and `promises` so having to attach all 3 packages is no longer required.
-* Performance enhancements.
-* Explicitly imports `nanonext` (the only package dependency of `mirai`).
 
 # mirai.promises 0.3.0
 

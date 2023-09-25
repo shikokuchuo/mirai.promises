@@ -22,6 +22,9 @@ Allows 'mirai' objects encapsulating asynchronous computations, from the
 
     An auxiliary function \code{\link{polling}} provides the additional
     option to tune the frequency at which 'mirai' are checked for resolution.
+
+    Package authors wishing to use the S3 methods may simply import the
+    function \code{\link{polling}} to make them available.
 }
 
 \section{Links}{

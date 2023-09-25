@@ -34,6 +34,9 @@
 #'     An auxiliary function \code{\link{polling}} provides the additional
 #'     option to tune the frequency at which 'mirai' are checked for resolution.
 #'
+#'     Package authors wishing to use the S3 methods may simply import the
+#'     function \code{\link{polling}} to make them available.
+#'
 #' @section Links:
 #'
 #'     \CRANpkg{mirai} website: \url{https://shikokuchuo.net/mirai/}
@@ -46,8 +49,7 @@
 #' @author Charlie Gao \email{charlie.gao@@shikokuchuo.net}
 #'     (\href{https://orcid.org/0000-0002-0750-061X}{ORCID})
 #'
-#' @importFrom mirai is_error_value
-#' @importFrom nanonext .unresolved
+#' @importFrom mirai is_error_value unresolved
 #' @importFrom later later
 #' @importFrom promises as.promise promise
 #'
@@ -89,9 +91,9 @@ as.promise.mirai <- function(x)
   promise(
     function(resolve, reject) {
       query <- function()
-        if (.unresolved(x))
+        if (unresolved(x))
           later(query, delay = ..[["freq"]]) else
-            if (is_error_value(value <- .subset2(x, "data")))
+            if (is_error_value(value <- .subset2(x, "value")))
               reject(value) else
                 resolve(value)
       query()
