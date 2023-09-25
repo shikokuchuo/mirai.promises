@@ -1,6 +1,6 @@
 # mirai.promises 0.3.0.9000 (development)
 
-* Depends on `mirai` and `promises` so having to attach all 3 packages is no longer required.
+* Depends on `mirai` and `promises` so no longer necessary to attach all 3 packages.
 
 # mirai.promises 0.3.0
 

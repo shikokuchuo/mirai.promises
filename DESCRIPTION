@@ -25,10 +25,10 @@ URL: https://shikokuchuo.net/mirai.promises/,
 Encoding: UTF-8
 Depends: 
     R (>= 3.5),
-    mirai,
+    mirai (>= 0.2.0),
     promises (>= 1.1.0)
 Imports: 
     later (>= 1.0.0)
 Suggests: 
-    nanonext
+    nanonext (>= 0.3.0)
 RoxygenNote: 7.2.3

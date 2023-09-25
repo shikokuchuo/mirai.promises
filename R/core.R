@@ -93,7 +93,7 @@ as.promise.mirai <- function(x)
       query <- function()
         if (unresolved(x))
           later(query, delay = ..[["freq"]]) else
-            if (is_error_value(value <- .subset2(x, "value")))
+            if (is_error_value(value <- .subset2(x, "data")))
               reject(value) else
                 resolve(value)
       query()
