@@ -47,6 +47,10 @@ The auxiliary function `polling()` may be used to customise the
 frequency with which to poll for promise resolution (defaults to every
 100 ms).
 
+Package authors wishing to use the S3 methods contained within this
+package may simply import the `polling()` function to make them
+available.
+
 ``` r
 library(mirai.promises)
 library(shiny)
@@ -84,10 +88,6 @@ server <- function(input, output, session) {
 
 shinyApp(ui = ui, server = server)
 ```
-
-Package authors wishing to use the S3 methods contained within this
-package may simply import the `polling()` function to make them
-available.
 
 ### Thanks
 
