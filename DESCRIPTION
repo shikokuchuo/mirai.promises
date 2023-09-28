@@ -1,7 +1,7 @@
 Package: mirai.promises
 Type: Package
 Title: Make 'Mirai' 'Promises'
-Version: 0.3.1
+Version: 0.3.1.9000
 Description: Allows 'mirai' objects encapsulating asynchronous computations,
     from the 'mirai' package by Gao (2023) <doi:10.5281/zenodo.7912722>, to be
     used interchangeably with 'promise' objects from the 'promises' package by
@@ -25,10 +25,10 @@ URL: https://shikokuchuo.net/mirai.promises/,
 Encoding: UTF-8
 Depends: 
     R (>= 3.5),
-    mirai (>= 0.2.0),
+    mirai (>= 0.10.0),
     promises (>= 1.1.0)
 Imports: 
     later (>= 1.0.0)
 Suggests: 
-    nanonext (>= 0.3.0)
+    nanonext (>= 0.10.1)
 RoxygenNote: 7.2.3
