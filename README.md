@@ -17,9 +17,14 @@ badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=24a60e)](h
 `mirai.promises` makes ‘mirai’ ‘promises’ for easy integration in
 ‘plumber’ or ‘shiny’ pipelines.
 
-`mirai.promises` also supports
-[`nanonext`](https://doi.org/10.5281/zenodo.7903429) ‘recvAio’
-asynchronous message receives.
+`mirai.promises` also makes
+[`nanonext`](https://cran.r-project.org/package=nanonext) ‘recvAio’
+‘promises’, working on asynchronous message receives.
+
+`mirai` \>= 0.11.1 already supports ‘promises’ out of the box. In this
+case, loading `mirai.promises` after `mirai` will mask the equivalent
+method to provide additional functionality offered by this package such
+as allowing a custom polling interval.
 
 ### Installation
 
@@ -35,6 +40,15 @@ or the development version from rOpenSci R-universe:
 install.packages("mirai.promises", repos = "https://shikokuchuo.r-universe.dev")
 ```
 
+### Polling Interval
+
+`polling()` may be used to customise the frequency with which to poll
+for promise resolution (defaults to every 100 ms).
+
+Package authors wishing to use the S3 methods contained within this
+package may simply import the `polling()` function to make them
+available.
+
 ### Example
 
 The below example simulates a plot function requiring a long compute in
@@ -43,17 +57,11 @@ a ‘shiny’ app.
 This app takes c. 2s to start compared to the 8s it would otherwise take
 if the ‘long-running’ computations were not running on parallel workers.
 
-The auxiliary function `polling()` may be used to customise the
-frequency with which to poll for promise resolution (defaults to every
-100 ms).
-
-Package authors wishing to use the S3 methods contained within this
-package may simply import the `polling()` function to make them
-available.
-
 ``` r
-library(mirai.promises)
 library(shiny)
+library(mirai)
+library(promises)
+library(mirai.promises)
 
 polling(freq = 50L)
 
