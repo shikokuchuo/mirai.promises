@@ -1,3 +1,7 @@
+# mirai.promises 0.4.0.9000 (development)
+
+* Performance enhancements.
+
 # mirai.promises 0.4.0
 
 * Modified dependencies to be minimal and support more use cases:

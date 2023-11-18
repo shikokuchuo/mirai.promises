@@ -58,7 +58,11 @@
 #'
 NULL
 
-. <- `[[<-`(new.env(hash = FALSE), "freq", 0.1)
+.onLoad <- function(libname, pkgname) {
+
+  as.promise.recvAio <<- as.promise.mirai <<- as.promise.mirai()
+
+}
 
 #' Make 'Mirai' 'Promise'
 #'
@@ -87,18 +91,21 @@ NULL
 #' @method as.promise mirai
 #' @export
 #'
-as.promise.mirai <- function(x)
-  promise(
-    function(resolve, reject) {
-      query <- function()
-        if (unresolved(x))
-          later(query, delay = .[["freq"]]) else
-            if (is_error_value(value <- .subset2(x, "value")))
-              reject(value) else
-                resolve(value)
-      query()
-    }
-  )
+as.promise.mirai <- function(x) {
+  pollfreq <- 0.1
+  function(x)
+    promise(
+      function(resolve, reject) {
+        query <- function()
+          if (unresolved(x))
+            later(query, delay = pollfreq) else
+              if (is_error_value(value <- .subset2(x, "value")))
+                reject(value) else
+                  resolve(value)
+        query()
+      }
+    )
+}
 
 #' @rdname as.promise.mirai
 #' @method as.promise recvAio
@@ -127,7 +134,7 @@ as.promise.recvAio <- as.promise.mirai
 polling <- function(freq = 100L) {
 
   is.numeric(freq) || stop("'freq' must be a numeric value")
-  `[[<-`(., "freq", freq / 1000L)
+  `[[<-`(environment(as.promise.mirai), "pollfreq", freq / 1000L)
   invisible()
 
 }
