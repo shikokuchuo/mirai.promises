@@ -58,11 +58,16 @@
 #'
 NULL
 
+# nocov start
+# tested implicitly
+
 .onLoad <- function(libname, pkgname) {
 
   as.promise.recvAio <<- as.promise.mirai <<- as.promise.mirai()
 
 }
+
+# nocov end
 
 #' Make 'Mirai' 'Promise'
 #'
