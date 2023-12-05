@@ -3,7 +3,6 @@
 S3method(as.promise,mirai)
 S3method(as.promise,recvAio)
 export(polling)
-importFrom(later,later)
 importFrom(nanonext,is_error_value)
 importFrom(nanonext,unresolved)
 importFrom(promises,as.promise)

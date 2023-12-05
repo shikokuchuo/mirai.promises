@@ -50,7 +50,6 @@
 #'     (\href{https://orcid.org/0000-0002-0750-061X}{ORCID})
 #'
 #' @importFrom nanonext is_error_value unresolved
-#' @importFrom later later
 #' @importFrom promises as.promise promise
 #'
 #' @docType package
@@ -97,6 +96,7 @@ NULL
 #' @export
 #'
 as.promise.mirai <- function(x) {
+  later <- .getNamespace("later")[["later"]]
   pollfreq <- 0.1
   function(x)
     promise(

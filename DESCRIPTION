@@ -26,7 +26,6 @@ Encoding: UTF-8
 Depends: 
     R (>= 3.5)
 Imports: 
-    later (>= 1.0.0),
     nanonext (>= 0.10.1),
     promises (>= 1.1.0)
 Suggests: 
