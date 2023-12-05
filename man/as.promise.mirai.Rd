@@ -19,8 +19,8 @@ A 'promise' object.
 Creates a 'promise' from a 'mirai' or 'recvAio'.
 }
 \details{
-This function is an S3 method for the generic \code{\link{as.promise}}
-    for class 'mirai' or 'recvAio'.
+This function is an S3 method for the generic
+    \code{\link{as.promise}} for class 'mirai' or 'recvAio'.
 
     \code{\link{polling}} may be used to customise the frequency with which
     to poll for promise resolution (defaults to every 100 milliseconds).

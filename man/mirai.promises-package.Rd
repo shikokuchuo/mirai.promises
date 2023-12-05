@@ -9,16 +9,16 @@
 Allows 'mirai' objects encapsulating asynchronous computations, from the
     \CRANpkg{mirai} package by Gao (2023), to be used interchangeably with
     'promise' objects from the \CRANpkg{promises} package by Cheng (2021).
-    This facilitates their use with packages \CRANpkg{plumber} by Schloerke and Allen
-    (2022) and \CRANpkg{shiny} by Cheng, Allaire, Sievert, Schloerke, Xie,
-    Allen, McPherson, Dipert and Borges (2022).
+    This facilitates their use with packages \CRANpkg{plumber} by Schloerke
+    and Allen (2022) and \CRANpkg{shiny} by Cheng, Allaire, Sievert,
+    Schloerke, Xie, Allen, McPherson, Dipert and Borges (2022).
 }
 \section{Notes}{
 
 
     This package provides the methods \code{\link{as.promise.mirai}} and
-    \code{\link{as.promise.recvAio}} for the S3 generic \code{\link{as.promise}}
-    exported by the 'promises' package.
+    \code{\link{as.promise.recvAio}} for the S3 generic
+    \code{\link{as.promise}} exported by the 'promises' package.
 
     An auxiliary function \code{\link{polling}} provides the additional
     option to tune the frequency at which 'mirai' are checked for resolution.

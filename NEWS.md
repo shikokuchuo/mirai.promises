@@ -1,4 +1,4 @@
-# mirai.promises 0.4.0.9000 (development)
+# mirai.promises 0.4.1
 
 * Performance enhancements.
 
