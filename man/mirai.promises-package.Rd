@@ -3,6 +3,7 @@
 \docType{package}
 \encoding{UTF-8}
 \name{mirai.promises-package}
+\alias{mirai.promises}
 \alias{mirai.promises-package}
 \title{mirai.promises: Make 'Mirai' 'Promises'}
 \description{
@@ -27,16 +28,15 @@ Allows 'mirai' objects encapsulating asynchronous computations, from the
     function \code{\link{polling}} to make them available.
 }
 
-\section{Links}{
-
-
-    \CRANpkg{mirai} website: \url{https://shikokuchuo.net/mirai/}
-
-    \CRANpkg{nanonext} website: \url{https://shikokuchuo.net/nanonext/}
-
-    NNG website: \url{https://nng.nanomsg.org/}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://shikokuchuo.net/mirai.promises/}
+  \item \url{https://github.com/shikokuchuo/mirai.promises/}
+  \item Report bugs at \url{https://github.com/shikokuchuo/mirai.promises/issues}
 }
 
+}
 \author{
 Charlie Gao \email{charlie.gao@shikokuchuo.net}
     (\href{https://orcid.org/0000-0002-0750-061X}{ORCID})

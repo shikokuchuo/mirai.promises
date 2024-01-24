@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Hibiki AI Limited <info@hibiki-ai.com>
+# Copyright (C) 2023-2024 Hibiki AI Limited <info@hibiki-ai.com>
 #
 # This file is part of mirai.promises.
 #
@@ -37,14 +37,6 @@
 #'     Package authors wishing to use the S3 methods may simply import the
 #'     function \code{\link{polling}} to make them available.
 #'
-#' @section Links:
-#'
-#'     \CRANpkg{mirai} website: \url{https://shikokuchuo.net/mirai/}
-#'
-#'     \CRANpkg{nanonext} website: \url{https://shikokuchuo.net/nanonext/}
-#'
-#'     NNG website: \url{https://nng.nanomsg.org/}
-#'
 #' @encoding UTF-8
 #' @author Charlie Gao \email{charlie.gao@@shikokuchuo.net}
 #'     (\href{https://orcid.org/0000-0002-0750-061X}{ORCID})
@@ -52,10 +44,7 @@
 #' @importFrom nanonext is_error_value unresolved
 #' @importFrom promises as.promise promise
 #'
-#' @docType package
-#' @name mirai.promises-package
-#'
-NULL
+"_PACKAGE"
 
 # nocov start
 # tested implicitly

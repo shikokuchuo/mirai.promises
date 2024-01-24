@@ -1,7 +1,7 @@
 Package: mirai.promises
 Type: Package
 Title: Make 'Mirai' 'Promises'
-Version: 0.4.1
+Version: 0.4.1.9000
 Description: Allows 'mirai' objects encapsulating asynchronous computations,
     from the 'mirai' package by Gao (2023) <doi:10.5281/zenodo.7912722>, to be
     used interchangeably with 'promise' objects from the 'promises' package by
@@ -30,4 +30,4 @@ Imports:
     promises (>= 1.1.0)
 Suggests: 
     mirai (>= 0.10.0)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
