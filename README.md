@@ -28,16 +28,16 @@ as allowing a custom polling interval.
 
 ### Installation
 
-Releases are made on rOpenSci R-universe, and also CRAN:
+Install the latest version from the R-releases R-universe, or CRAN:
 
 ``` r
-install.packages("mirai.promises", repos = c("shikokuchuo.r-universe.dev", "cloud.r-project.org"))
+install.packages("mirai.promises", repos = "https://r-releases.r-universe.dev")
 ```
 
-Install the latest development version from Github:
+Or the development build from the author’s R-universe:
 
 ``` r
-remotes::install_github("shikokuchuo/mirai.promises")
+install.packages("mirai.promises", repos = "https://shikokuchuo.r-universe.dev")
 ```
 
 ### Polling Interval
