@@ -42,20 +42,11 @@
 #'     (\href{https://orcid.org/0000-0002-0750-061X}{ORCID})
 #'
 #' @importFrom nanonext is_error_value unresolved
-#' @importFrom promises as.promise promise
+#' @importFrom promises as.promise is.promising promise then
 #'
 "_PACKAGE"
 
-# nocov start
-# tested implicitly
-
-.onLoad <- function(libname, pkgname) {
-
-  as.promise.recvAio <<- as.promise.mirai <<- as.promise.mirai()
-
-}
-
-# nocov end
+. <- list2env(list(later = .getNamespace("later")[["later"]], pollfreq = 0.1))
 
 #' Make 'Mirai' 'Promise'
 #'
@@ -85,27 +76,51 @@
 #' @export
 #'
 as.promise.mirai <- function(x) {
-  later <- .getNamespace("later")[["later"]]
-  pollfreq <- 0.1
-  function(x)
-    promise(
+  force(x)
+  then(
+    promise = promise(
       function(resolve, reject) {
         query <- function()
           if (unresolved(x))
-            later(query, delay = pollfreq) else
-              if (is_error_value(value <- .subset2(x, "value")))
-                reject(value) else
-                  resolve(value)
+            .[["later"]](query, delay = .[["pollfreq"]]) else
+              resolve(.subset2(x, "value"))
         query()
       }
-    )
+    ),
+    onFulfilled = function(value)
+      if (is_error_value(value) && !mirai::is_mirai_interrupt(value))
+        stop(value) else
+          value
+  )
 }
 
 #' @rdname as.promise.mirai
 #' @method as.promise recvAio
 #' @export
 #'
-as.promise.recvAio <- as.promise.mirai
+as.promise.recvAio <- function(x) {
+  force(x)
+  then(
+    promise = promise(
+      function(resolve, reject) {
+        query <- function()
+          if (unresolved(x))
+            .[["later"]](query, delay = .[["pollfreq"]]) else
+              resolve(.subset2(x, "value"))
+        query()
+      }
+    ),
+    onFulfilled = function(value)
+      if (is_error_value(value))
+        stop(value) else
+          value
+  )
+}
+
+#' @method is.promising recvAio
+#' @export
+#'
+is.promising.recvAio <- function(x) TRUE
 
 #' Set Polling Frequency
 #'
@@ -128,7 +143,7 @@ as.promise.recvAio <- as.promise.mirai
 polling <- function(freq = 100L) {
 
   is.numeric(freq) || stop("'freq' must be a numeric value")
-  `[[<-`(environment(as.promise.mirai), "pollfreq", freq / 1000L)
+  `[[<-`(., "pollfreq", freq / 1000L)
   invisible()
 
 }

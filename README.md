@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/mirai.promises?color=112d4e)](https://CRAN.R-project.org/package=mirai.promises)
 [![mirai.promises status
-badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=24a60e)](https://shikokuchuo.r-universe.dev/mirai.promises)
+badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=ddcacc)](https://shikokuchuo.r-universe.dev/mirai.promises)
 [![R-CMD-check](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml)
 [![Codecov](https://codecov.io/gh/shikokuchuo/mirai.promises/branch/main/graph/badge.svg)](https://app.codecov.io/gh/shikokuchuo/mirai.promises)
 [![DOI](https://zenodo.org/badge/647242817.svg)](https://zenodo.org/badge/latestdoi/647242817)
@@ -34,7 +34,7 @@ Install the latest release from CRAN:
 install.packages("mirai.promises")
 ```
 
-or the development version from rOpenSci R-universe:
+Or the development version from R-universe:
 
 ``` r
 install.packages("mirai.promises", repos = "https://shikokuchuo.r-universe.dev")
@@ -98,6 +98,9 @@ shinyApp(ui = ui, server = server)
 ```
 
 ### Thanks
+
+[Joe Cheng](https://github.com/jcheng5) for optimising the promises
+method to work seamlessly within Shiny.
 
 [Daniel Falbel](https://github.com/dfalbel/) for the original version of
 the above example and agreeing to its use here, as well as the specific
