@@ -1,4 +1,4 @@
-# mirai.promises 0.4.1.9000 (development)
+# mirai.promises 0.5.0
 
 * Updates promises method for improved integration with Shiny (thanks @jcheng5).
 * Adds is.promising() method for 'recvAio'.
