@@ -15,13 +15,7 @@ knitr::opts_chunk$set(
 
 # mirai.promises
 
-<!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/mirai.promises?color=112d4e)](https://CRAN.R-project.org/package=mirai.promises)
-[![mirai.promises status badge](https://shikokuchuo.r-universe.dev/badges/mirai.promises?color=ddcacc)](https://shikokuchuo.r-universe.dev/mirai.promises)
-[![R-CMD-check](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/shikokuchuo/mirai.promises/actions/workflows/R-CMD-check.yaml)
-[![Codecov](https://codecov.io/gh/shikokuchuo/mirai.promises/branch/main/graph/badge.svg)](https://app.codecov.io/gh/shikokuchuo/mirai.promises)
-[![DOI](https://zenodo.org/badge/647242817.svg)](https://zenodo.org/badge/latestdoi/647242817)
-<!-- badges: end -->
+**This package is archived as promises implemented by `mirai >= 1.0.0` are superior to the ones provided here. The more efficient, next generation promises in `mirai` are completely event-driven and non-polling, allowing for higher scalability and lower latency.**
 
 `mirai.promises` makes 'mirai' 'promises' for easy integration in 'plumber' or 'shiny' pipelines.
 
